@@ -1,0 +1,74 @@
+/* css/styles.css */
+
+body {
+    background-color: #e9e5ec;
+    color: #343a40;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.jumbotron {
+    background-color: #1a1c1f;
+    color: #fff;
+    padding: 4rem;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.color {
+    color: #fff; 
+}
+
+.jumbotron h1 {
+    font-size: 3.5rem;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+}
+
+.jumbotron a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.jumbotron a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #007bff;
+}
+
+.services {
+    margin-top: 3rem;
+}
+
+.services img {
+    max-width: 100%;
+    height: auto;
+}
+.nav-link{
+    color: white;
+   
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: white;
+    font-weight: bold;
+    
+}
+.navbar-nav a {
+    /* font-family: 'TuTipoDeLetra', sans-serif; Reemplaza 'TuTipoDeLetra' con el tipo de letra que prefieras */
+    font-family: 'PT Serif', serif;
+}
+.navbar-nav .nav-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);  /* Cambia 'white' al color que desees para la línea vertical */
+}
+
+/* Para evitar que el último elemento tenga un borde derecho */
+.navbar-nav .nav-item:last-child {
+    border-right: none;
+}
+
+

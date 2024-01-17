@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %} {{_('Pagina inicio')}} {% endblock %}
+
+{% block content %}
+<div class="body">
+    <div>
+
+        <!-- CAROUSEL -->
+        <div class="carousel slide w-90 " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="8000">
+                    <img src="{{ url_for('static', filename='img/mod1.jpg') }}" class="d-block w-100 " alt="modelo1">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="8000">
+                    <img src="{{ url_for('static', filename='img/mod2.jpg') }}" class="d-block w-100" alt="modelo2">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="8000">
+                    <img src="{{ url_for('static', filename='img/mod3.jpg') }}" class="d-block w-100" alt="modelo3">
+                    <div class="carousel-caption d-none d-md-block">
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{_('Anterior')}}</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{_('Siguiente')}}</span>
+            </button>
+        </div>
+
+        <br>
+        <div class="jumbotron mx-3"
+            style="background-color: #000000; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+            <h1 class="display-4">{{_('¡Bienvenido a LlantasExpress')}}!</h1>
+            <p class="lead">{{_('Descubre las mejores opciones de llantas para tu vehículo.')}}</p>
+            <hr class="my-4">
+            <p>{{_('En nuestro compromiso por brindarte la mejor calidad y servicio, contamos con un amplio catálogo de llantas de las marcas más reconocidas.')}}</p>
+            <p>{{_('Explora nuestras ofertas y encuentra la llanta perfecta para tu conducción')}}.</p>
+            <a class="btn btn-primary btn-lg color" href="{{ url_for('catalogo.catalogo') }}" role="button">{{_('Ver Catálogo')}}</a>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">{{_('¿Quiénes Somos')}}?</h2>
+                                <p class="card-text text-justify">{{_('Somos apasionados por los vehículos y la seguridad en la carretera. Nuestra misión es proporcionar a nuestros clientes las mejores llantas para garantizar un viaje seguro y cómodo')}}.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="{{url_for('static', filename='img/personal.png' )}}" alt="Imagen"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">{{_('Nuestros Servicios')}}</h2>
+                                <p class="card-text text-justify">{{_('Ofrecemos una amplia variedad de llantas para automóviles, camiones y SUVs. Además, brindamos servicios de instalación y asesoramiento personalizado para asegurarnos de que elijas la llanta adecuada para tus necesidades')}}.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="{{url_for('static', filename='img/servicios.png' )}}" alt="Otra Imagen"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="services">
+            <h2>{{_('Nuestros Productos')}}</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='img/llanta1.jpg') }}" alt="Llanta 1">
+                    <p>{{_('Llanta para pista')}}</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='img/cat1.jpg') }}" alt="Llanta 2">
+                    <p>{{_('Llanta todoterreno')}}</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='img/cat2.png') }}" alt="Llanta 3">
+                    <p>{{_('Llanta multiproposito')}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

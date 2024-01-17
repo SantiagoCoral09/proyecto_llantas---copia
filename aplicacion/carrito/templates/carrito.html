@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %} {{_('Carrito')}} {% endblock %}
+{% block content %}
+
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<br>
+
+<ul class="container">
+    {% for category,message in messages %}
+    <div class="alert alert-{{category}}">
+        <li>{{message}}</li>
+    </div>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<div class="container mt-5">
+    <h2 class="text-center">{{_('Agrega al Carrito')}}</h2>
+    <div class="row ">
+        {% for producto in productos %}
+        <div class="col-sm-4 mb-3 mb-sm-3">
+            <div class="card">
+                <img src="{{ producto[5] }}" alt="Llanta 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{producto[1]}} - {{producto[2]}}</h5>
+                    <h5 class="card-title"></h5>
+                    <h5 class="card-subtitle">$ {{producto[3]}}</h5>
+                    <hr>
+                    <p class="small">{{producto[4]}}</p>
+                    <form action="{{url_for('carrito.agregar_producto',id_producto=producto[0])}}" method="post">
+                        {{_('Cantidad')}} 
+                        <div class="d-flex justify-content-center">
+                        <input type="number" class="form-control" style="border-color: black; width: 100px;"
+                            name="cantidad_{{producto[0]}}" id="cantidad_{{producto[0]}}" value="1">
+                           </div> 
+                            <br>
+                        <button class="btn btn-primary add-to-cart " type="submit">{{_('Agregar al Carrito')}}</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    <!-- Agrega los controles de paginación -->
+    <div class="pagination justify-content-center">
+        {{ pagination.links }}
+    </div>
+</div>
+
+
+<div class="container-fluid mt-5">
+    <h2 class="mb-4 text-center">{{_('Carrito de Compras')}}. Total:<span
+            id="total">{{carrito_compras.cantidad_productos}}</span></h2>
+
+    <div class="row">
+        <div class="col-md-9 table-responsive">
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>{{_('Producto')}}</th>
+                        <th>{{_('Imagen')}}</th>
+                        <th>{{_('Cantidad')}}</th>
+                        <th>{{_('Precio Unitario')}}</th>
+                        <th>Total</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if carrito_compras.cantidad_productos == 0 %}
+                    <h5 class="">{{_('El carrito está vacío')}}</h5>
+                    {% else %}
+                    {% for producto in carrito_compras.productos %}
+                    <tr>
+                        <form action="{{url_for('carrito.modificar_producto',id_producto_carrito=producto[0])}}"
+                            method="post">
+                            <td>{{producto[2]}} - {{producto[3]}}</td>
+                            <td><img src="{{ producto[6] }}" alt="{{producto[6]}}"
+                                    class="img-thumbnail" style="max-width: 50px;"></td>
+                            <td class="d-flex justify-content-center">
+                                <input type="number" name="cantidad_{{producto[0]}}" class="form-control"
+                                    value="{{producto[7]}}" min="1" style="width: 80px; border-color: black;">
+                            </td>
+                            <td>${{producto[4]}}</td>
+                            <td>${{producto[8]}}</td>
+                            <td><button type="submit" class="btn btn-success btn-sm">{{_('Modificar')}}</button></td>
+                            <td><button type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalEliminar_{{producto[0]}}"
+                                    class="btn btn-danger btn-sm">X</button></td>
+
+                        </form>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalEliminar_{{producto[0]}}" tabindex="-1"
+                            aria-labelledby="modalEliminar_{{producto[0]}}Label" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header"
+                                        style="background-color: rgba(3, 9, 39, 0.7); color: aliceblue;">
+                                        <h1 class="modal-title fs-5" id="modalEliminar_{{producto[0]}}Label">{{_('¿Deseas sacar el producto del carrito')}}?</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h4>{{producto[2]}} - {{producto[3]}}</h4>
+                                        <a href="{{url_for('carrito.eliminar_producto',id_producto_carrito=producto[0])}}"
+                                            type="button" class="btn btn-primary">OK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{_('Resumen de la Compra')}}</h5>
+                    <p class="card-text">Total: ${{carrito_compras.valor_total}}</p>{% if
+                    carrito_compras.cantidad_productos > 0 %}
+                    <a href="{{url_for('carrito.comprar')}}" class="btn btn-primary">{{_('Proceder al Pago')}} </a>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('cuenta.static', filename='styles.css')}}">
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+
+<body class="body-cuenta">
+    <div class="container login-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header text-center bg-dark text-white">
+                        <h3>{{_('Mi Cuenta Personal')}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{url_for('cuenta.login')}}" method="POST" novalidate>
+                            <!-- seguridad de datos -->
+                            {{ form.csrf_token }}
+                            <div class="form-group">
+                            <!-- muestra cada datos de entrada -->
+                            {{form.usuariologin.label()}} {{form.usuariologin(class="form-control", placeholder=_("Ingrese su usuario"))}}
+                            </div>
+                            <!-- validacion de errores -->
+                            {% if form.usuariologin.errors %}
+                            <div class="alert alert-danger">
+                            {{ form.usuariologin.errors[0] }}
+                            </div>
+                            {% endif %}
+                            
+                            <div class="form-group">
+                            {{form.contraseñalogin.label()}} {{form.contraseñalogin(class="form-control", placeholder=_("Ingrese su contraseña"))}}
+                            </div>
+                            <!-- validacion de errores -->
+                            {% if form.contraseñalogin.errors %}
+                            <div class="alert alert-danger">
+                            {{ form.contraseñalogin.errors[0] }}
+                            </div>
+                            {% endif %}
+                            <!-- boton envie el formulario -->
+                            {{form.submitlogin(class="btn btn-dark btn-block")}}
+                        </form>
+                        <br>
+                            {% with messages=get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            <ul>
+                            {% for category,message in messages %}
+                            <div class="alert alert-{{category}}">
+                                <li>{{message}}</li>
+                            </div>
+                            {% endfor %}
+                        </ul>
+                            {% endif %}
+                            {% endwith %}
+                        <div class="text-center mt-3">
+                            <p>{{_('¿No estás registrado')}}? <a href="{{ url_for('cuenta.registro') }}">{{_('Regístrate aquí')}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega la referencia a Bootstrap JS y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+<br>
+{% endblock %}
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro compra</title>
+
+  <style>
+    .body-cuenta {
+      background-color: #aaaaaa;
+    }
+
+    body {
+      background-color: #e9e5ec;
+      color: #000000;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .card-header {
+      text-align: center;
+      background-color: #3d3d3d;
+      color: white;
+      padding: 20px;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    .table {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
+    }
+    .table thead{
+        background-color: #2f3442;
+        color: #dee2e6;
+    }
+    
+    .table tbody tr:nth-child(odd) {
+        background-color: #c6cccf; 
+        color: #000000;
+      }
+  
+      .table tbody tr:nth-child(even) {
+        background-color: #868c8f;
+        color: aliceblue;
+      }
+
+    .table th,
+    .table td {
+
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+
+<body class="body-cuenta">
+  <div class="container register-container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h3>{{_("Gracias por comprar en Llantas Express")}}</h3>
+          </div>
+          <div class="card-body">
+            <h3>{{_('Tus productos comprados')}}</h3>
+            <div class="card-body">
+              <div>
+                <h3>información de la compra:</h3>
+                <h3>Fecha: {{compra[2]}}</h3>
+                <h3>Id compra: {{compra[0]}} <br> Cliente: {{username}}<br>Celular: {{compra[4]}}<br>Dirección: {{compra[5]}}<br>Método de pago: {{compra[6]}}</h3>
+                <h4>Total {{_('a pagar')}}: ${{carrito_compras.valor_total}}</h4>
+              </div>
+              <hr>
+            </div>
+            <div class="col-md-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>{{_('Producto')}}</th>
+                    <th>{{_('Descripción')}}</th>
+                    <th>{{_('Cantidad')}}</th>
+                    <th>{{_('Precio Unitario')}}</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                {% if carrito_compras.cantidad_productos == 0 %}
+                <h5 class="">{{_('El carrito está vacío')}}</h5>
+                {% else %}
+                <tbody>
+                  {% for producto in carrito_compras.productos %}
+                  <tr>
+                    <td>{{producto[2]}} - {{producto[3]}}</td>
+                    <td class="small">{{producto[5]}}</td>
+                    <td>{{producto[7]}}</td>
+                    <td>${{producto[4]}}</td>
+                    <td>${{producto[8]}}</td>
+                  </tr>
+                  
+                  {% endfor %}
+                </tbody>
+                {% endif %}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

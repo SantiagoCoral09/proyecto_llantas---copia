@@ -1,0 +1,344 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-16 21:29-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: aplicacion/__init__.py:25
+msgid "This is may language"
+msgstr ""
+
+#: aplicacion/carrito/carrito_compras.py:42
+msgid "Se actualizó la cantidad del producto"
+msgstr ""
+
+#: aplicacion/carrito/carrito_compras.py:46
+msgid "Se agregó el producto al carrito"
+msgstr ""
+
+#: aplicacion/carrito/carrito_compras.py:54
+msgid "Se modificó el producto del carrito"
+msgstr ""
+
+#: aplicacion/carrito/routes.py:65 aplicacion/carrito/routes.py:95
+msgid "Error la cantidad no puede ser menor o igual a 0"
+msgstr ""
+
+#: aplicacion/carrito/routes.py:110
+msgid "Se eliminó el producto del carrito"
+msgstr ""
+
+#: aplicacion/carrito/routes.py:141
+msgid "Se ha registrado su compra exitosamente"
+msgstr ""
+
+#: aplicacion/carrito/routes.py:145
+msgid "Ha ocurrido un error"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:2
+msgid "Carrito"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:20
+msgid "Agrega al Carrito"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:33
+#: aplicacion/carrito/templates/carrito.html:66
+#: aplicacion/carrito/templates/comprar.html:28
+msgid "Cantidad"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:39
+msgid "Agregar al Carrito"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:56
+msgid "Carrito de Compras"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:64
+#: aplicacion/carrito/templates/comprar.html:25
+msgid "Producto"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:65
+#: aplicacion/carrito/templates/comprar.html:26
+msgid "Imagen"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:67
+#: aplicacion/carrito/templates/comprar.html:29
+msgid "Precio Unitario"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:75
+#: aplicacion/carrito/templates/comprar.html:36
+msgid "El carrito está vacío"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:90
+msgid "Modificar"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:103
+msgid "¿Deseas sacar el producto del carrito"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:126
+msgid "Resumen de la Compra"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:129
+msgid "Proceder al Pago"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:5
+msgid "Registro de compra"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:17
+msgid "Registra información para la compra"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:20
+msgid "Tus productos a comprar"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:27
+msgid "Descripción"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:63
+msgid "Registra información para el envío de la compra"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:64
+msgid "a pagar"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:71
+msgid "Ingrese su celular"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:82
+msgid "Ingrese su dirección"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:92
+msgid "Ingrese su método de pago"
+msgstr ""
+
+#: aplicacion/catalogo/templates/catalogo.html:2
+msgid "Catalogo"
+msgstr ""
+
+#: aplicacion/cuenta/routes.py:26
+msgid "Inicio de sesión exitoso"
+msgstr ""
+
+#: aplicacion/cuenta/routes.py:31
+msgid "La contraseña no es correcta"
+msgstr ""
+
+#: aplicacion/cuenta/routes.py:33
+msgid "Usuario no esta registrado"
+msgstr ""
+
+#: aplicacion/cuenta/routes.py:54
+msgid "Usuario o correo electrónico ya registrados"
+msgstr ""
+
+#: aplicacion/cuenta/routes.py:59
+msgid "Registro exitoso. ¡Ahora puedes iniciar sesión!"
+msgstr ""
+
+#: aplicacion/cuenta/templates/cuentalog.html:13
+msgid "Mi Cuenta Personal"
+msgstr ""
+
+#: aplicacion/cuenta/templates/cuentalog.html:21
+#: aplicacion/cuenta/templates/registro.html:21
+msgid "Ingrese su usuario"
+msgstr ""
+
+#: aplicacion/cuenta/templates/cuentalog.html:31
+#: aplicacion/cuenta/templates/registro.html:41
+msgid "Ingrese su contraseña"
+msgstr ""
+
+#: aplicacion/cuenta/templates/cuentalog.html:55
+msgid "¿No estás registrado"
+msgstr ""
+
+#: aplicacion/cuenta/templates/cuentalog.html:55
+msgid "Regístrate aquí"
+msgstr ""
+
+#: aplicacion/cuenta/templates/registro.html:5
+msgid "Registro"
+msgstr ""
+
+#: aplicacion/cuenta/templates/registro.html:15
+msgid "Registrate"
+msgstr ""
+
+#: aplicacion/cuenta/templates/registro.html:31
+msgid "Ingrese su correo electrónico"
+msgstr ""
+
+#: aplicacion/cuenta/templates/registro.html:64
+msgid "¿Ya tienes una cuenta"
+msgstr ""
+
+#: aplicacion/cuenta/templates/registro.html:64
+msgid "Inicia sesión aquí"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:2
+msgid "Pagina inicio"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:39
+msgid "Anterior"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:44
+msgid "Siguiente"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:51
+msgid "¡Bienvenido a LlantasExpress"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:52
+msgid "Descubre las mejores opciones de llantas para tu vehículo."
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:54
+msgid ""
+"En nuestro compromiso por brindarte la mejor calidad y servicio, contamos"
+" con un amplio catálogo de llantas de las marcas más reconocidas."
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:55
+msgid "Explora nuestras ofertas y encuentra la llanta perfecta para tu conducción"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:56
+msgid "Ver Catálogo"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:65
+msgid "¿Quiénes Somos"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:66
+msgid ""
+"Somos apasionados por los vehículos y la seguridad en la carretera. "
+"Nuestra misión es proporcionar a nuestros clientes las mejores llantas "
+"para garantizar un viaje seguro y cómodo"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:81
+msgid "Nuestros Servicios"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:82
+msgid ""
+"Ofrecemos una amplia variedad de llantas para automóviles, camiones y "
+"SUVs. Además, brindamos servicios de instalación y asesoramiento "
+"personalizado para asegurarnos de que elijas la llanta adecuada para tus "
+"necesidades"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:98
+msgid "Nuestros Productos"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:102
+msgid "Llanta para pista"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:106
+msgid "Llanta todoterreno"
+msgstr ""
+
+#: aplicacion/inicio/templates/inicio.html:110
+msgid "Llanta multiproposito"
+msgstr ""
+
+#: aplicacion/templates/base.html:43
+msgid "Idioma"
+msgstr ""
+
+#: aplicacion/templates/base.html:47
+msgid "Inglés"
+msgstr ""
+
+#: aplicacion/templates/base.html:49
+msgid "Español"
+msgstr ""
+
+#: aplicacion/templates/base.html:59 aplicacion/templates/base.html:159
+msgid "Inicio"
+msgstr ""
+
+#: aplicacion/templates/base.html:63 aplicacion/templates/base.html:160
+msgid "Catálogo"
+msgstr ""
+
+#: aplicacion/templates/base.html:66
+msgid "Productos"
+msgstr ""
+
+#: aplicacion/templates/base.html:79
+msgid "Cerrar Sesion"
+msgstr ""
+
+#: aplicacion/templates/base.html:90
+msgid "Mi cuenta"
+msgstr ""
+
+#: aplicacion/templates/base.html:131
+msgid "¿Deseas cerrar sesión"
+msgstr ""
+
+#: aplicacion/templates/base.html:135
+msgid "Cerrar Sesión"
+msgstr ""
+
+#: aplicacion/templates/base.html:151
+msgid "Contacto"
+msgstr ""
+
+#: aplicacion/templates/base.html:152
+msgid "Dirección"
+msgstr ""
+
+#: aplicacion/templates/base.html:153
+msgid "Teléfono"
+msgstr ""
+
+#: aplicacion/templates/base.html:157
+msgid "Enlaces Rápidos"
+msgstr ""
+
+#: aplicacion/templates/base.html:166
+msgid "Síguenos en Redes Sociales"
+msgstr ""
+

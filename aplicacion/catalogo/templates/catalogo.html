@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %} {{_('Catalogo')}} {% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center, mx-auto p-2" style="width: 1200px;">
+    <div class="col-sm-4 mb-3 mb-sm-3">
+        <div class="card d-flex flex-column h-100">
+            <img src="{{ url_for('static', filename='img/cat1.PNG') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">DOUBLESTAR</h5>
+                <h3 class="card-title">185/65 R15</h3>
+                <h3 class="card-title" style="color: red;">$189.000</h3>
+                <p class="card-text">Diseño moderno y todoterreno: el diseño de banda de rodadura de cinco costillas crea un patrón de bordes de agarre...</p>
+                <div class="d-flex justify-content-center">
+                   <a href="{{url_for('carrito.productos')}}" class="btn btn-danger">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mb-3 mb-sm-3">
+        <div class="card d-flex flex-column h-100">
+            <img src="{{ url_for('static', filename='img/catalogo3.PNG') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Llantas Michelin</h5>
+                <h3 class="card-title">205/55 R16</h3>
+                <h3 class="card-title" style="color: red;">$530.000</h3>
+                <p class="card-text">Tecnologia llanta de alto desempeño, y con gran rendimiento en kilometraje...</p>
+                <div class="d-flex justify-content-center">
+                   <a href="{{url_for('carrito.productos')}}" class="btn btn-danger">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mb-3 mb-sm-3">
+        <div class="card d-flex flex-column h-100">
+            <img src="{{ url_for('static', filename='img/catalogo2.PNG') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">AUSTONE</h5>
+                <h3 class="card-title">165/70 R14</h3>
+                <h3 class="card-title" style="color: red;">$387.000</h3>
+                <p class="card-text">Equilibrio entre kilometraje y rendimiento energético, economía inteligente y respetuoso con el medio ambiente..</p>
+                <div class="d-flex justify-content-center">
+                   <a href="{{url_for('carrito.productos')}}" class="btn btn-danger">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

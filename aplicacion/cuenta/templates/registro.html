@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('cuenta.static', filename='styles.css')}}">
+
+{% extends "base.html" %}
+{% block title %} {{_('Registro')}} {% endblock %}
+
+{% block content %}
+<br>
+<body class="body-cuenta">
+    <div class="container register-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header text-center bg-dark text-white">
+                        <h3>{{_('Registrate')}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {{ form.csrf_token }}
+                            <div class="form-group">
+                            {{form.usuarioreg.label()}} {{form.usuarioreg(class="form-control", placeholder=_("Ingrese su usuario"))}}
+                            </div>
+                            <!-- validacion de errores -->
+                            {% if form.usuarioreg.errors %}
+                            <div class="alert alert-danger">
+                            {{ form.usuarioreg.errors[0] }}
+                            </div>
+                            {% endif %}
+
+                            <div class="form-group">
+                            {{form.correoreg.label()}} {{form.correoreg(class="form-control", placeholder=_("Ingrese su correo electrónico"))}}
+                            </div>
+                            <!-- validacion de errores -->
+                            {% if form.correoreg.errors %}
+                            <div class="alert alert-danger">
+                            {{ form.correoreg.errors[0] }}
+                            </div>
+                            {% endif %}
+                            
+                            <div class="form-group">
+                            {{form.contraseñareg.label()}} {{form.contraseñareg(class="form-control", placeholder=_("Ingrese su contraseña"))}}
+                            </div>
+                            <!-- validacion de errores -->
+                            {% if form.contraseñareg.errors %}
+                            <div class="alert alert-danger">
+                            {{ form.contraseñareg.errors[0] }}
+                            </div>
+                            {% endif %}
+                            {{form.submitreg(class="btn btn-dark btn-block")}}
+                        </form>
+                        <br>
+                        {% with messages=get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            <ul>
+                            {% for category,message in messages %}
+                            <div class="alert alert-{{category}}">
+                                <li>{{message}}</li>
+                            </div>
+                            {% endfor %}
+                        </ul>
+                            {% endif %}
+                            {% endwith %}
+                        <div class="text-center mt-3">
+                            <p>{{_('¿Ya tienes una cuenta')}}? <a href="{{ url_for('cuenta.login') }}">{{_('Inicia sesión aquí')}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega la referencia a Bootstrap JS y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+
+
+<br>
+{% endblock %}

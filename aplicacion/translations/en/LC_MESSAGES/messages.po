@@ -1,0 +1,377 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-16 21:01-0500\n"
+"PO-Revision-Date: 2024-01-16 21:02-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: aplicacion/carrito/carrito_compras.py:42
+msgid "Se actualizó la cantidad del producto"
+msgstr "The product quantity was updated"
+
+#: aplicacion/carrito/carrito_compras.py:46
+msgid "Se agregó el producto al carrito"
+msgstr "The product was added to the cart"
+
+#: aplicacion/carrito/carrito_compras.py:54
+msgid "Se modificó el producto del carrito"
+msgstr "The cart product was modified"
+
+#: aplicacion/carrito/routes.py:65 aplicacion/carrito/routes.py:95
+msgid "Error la cantidad no puede ser menor o igual a 0"
+msgstr "Error: quantity cannot be less than or equal to 0"
+
+#: aplicacion/carrito/routes.py:110
+msgid "Se eliminó el producto del carrito"
+msgstr "The product was removed from the cart"
+
+#: aplicacion/carrito/routes.py:141
+msgid "Se ha registrado su compra exitosamente"
+msgstr "Your purchase has been successfully registered"
+
+#: aplicacion/carrito/routes.py:145
+msgid "Ha ocurrido un error"
+msgstr "An error has occurred"
+
+#: aplicacion/carrito/templates/carrito.html:2
+msgid "Carrito"
+msgstr "Cart"
+
+#: aplicacion/carrito/templates/carrito.html:20
+msgid "Agrega al Carrito"
+msgstr "Add to Cart"
+
+#: aplicacion/carrito/templates/carrito.html:33
+#: aplicacion/carrito/templates/carrito.html:66
+#: aplicacion/carrito/templates/comprar.html:28
+msgid "Cantidad"
+msgstr "Quantity"
+
+#: aplicacion/carrito/templates/carrito.html:39
+msgid "Agregar al Carrito"
+msgstr "Add to Cart"
+
+#: aplicacion/carrito/templates/carrito.html:56
+msgid "Carrito de Compras"
+msgstr "Shopping Cart"
+
+#: aplicacion/carrito/templates/carrito.html:64
+#: aplicacion/carrito/templates/comprar.html:25
+msgid "Producto"
+msgstr "Product"
+
+#: aplicacion/carrito/templates/carrito.html:65
+#: aplicacion/carrito/templates/comprar.html:26
+msgid "Imagen"
+msgstr "Image"
+
+#: aplicacion/carrito/templates/carrito.html:67
+#: aplicacion/carrito/templates/comprar.html:29
+msgid "Precio Unitario"
+msgstr "Unit Price"
+
+#: aplicacion/carrito/templates/carrito.html:75
+#: aplicacion/carrito/templates/comprar.html:36
+msgid "El carrito está vacío"
+msgstr "The cart is empty"
+
+#: aplicacion/carrito/templates/carrito.html:90
+msgid "Modificar"
+msgstr "Modify"
+
+#: aplicacion/carrito/templates/carrito.html:103
+msgid ""
+"¿Deseas\n"
+"                                            sacar el producto\n"
+"                                            del carrito"
+msgstr ""
+
+#: aplicacion/carrito/templates/carrito.html:128
+msgid "Resumen de la Compra"
+msgstr "Purchase Summary"
+
+#: aplicacion/carrito/templates/carrito.html:131
+msgid "Proceder al Pago"
+msgstr "Proceed to Payment"
+
+#: aplicacion/carrito/templates/comprar.html:5
+msgid "Registro de compra"
+msgstr "Purchase Registration"
+
+#: aplicacion/carrito/templates/comprar.html:17
+msgid "Registra información para la compra"
+msgstr "Register information for the purchase"
+
+#: aplicacion/carrito/templates/comprar.html:20
+msgid "Tus productos a comprar"
+msgstr "Your products to buy"
+
+#: aplicacion/carrito/templates/comprar.html:27
+msgid "Descripción"
+msgstr "Description"
+
+#: aplicacion/carrito/templates/comprar.html:63
+msgid "Registra información para el envío de la compra"
+msgstr "Register information for the shipping of the purchase"
+
+#: aplicacion/carrito/templates/comprar.html:64
+msgid "a pagar"
+msgstr "to pay"
+
+#: aplicacion/carrito/templates/comprar.html:71
+msgid ""
+"Ingrese\n"
+"                                    su celular"
+msgstr ""
+
+#: aplicacion/carrito/templates/comprar.html:83
+msgid "Ingrese su dirección"
+msgstr "Enter your address"
+
+#: aplicacion/carrito/templates/comprar.html:93
+msgid ""
+"Ingrese su\n"
+"                                    método de pago"
+msgstr ""
+
+#: aplicacion/catalogo/templates/catalogo.html:2
+msgid "Catalogo"
+msgstr "Catalog"
+
+#: aplicacion/cuenta/routes.py:26
+msgid "Inicio de sesión exitoso"
+msgstr "Successful login"
+
+#: aplicacion/cuenta/routes.py:31
+msgid "La contraseña no es correcta"
+msgstr "Incorrect password"
+
+#: aplicacion/cuenta/routes.py:33
+#, fuzzy
+msgid "Usuario no esta registrado"
+msgstr "User is not registered"
+
+#: aplicacion/cuenta/routes.py:54
+msgid "Usuario o correo electrónico ya registrados"
+msgstr "User or email already registered"
+
+#: aplicacion/cuenta/routes.py:59
+msgid "Registro exitoso. ¡Ahora puedes iniciar sesión!"
+msgstr "Registration successful. Now you can log in!"
+
+#: aplicacion/cuenta/templates/cuentalog.html:13
+msgid "Mi Cuenta Personal"
+msgstr "My Personal Account"
+
+#: aplicacion/cuenta/templates/cuentalog.html:21
+#: aplicacion/cuenta/templates/registro.html:21
+msgid "Ingrese su usuario"
+msgstr "Enter your username"
+
+#: aplicacion/cuenta/templates/cuentalog.html:31
+#: aplicacion/cuenta/templates/registro.html:41
+msgid "Ingrese su contraseña"
+msgstr "Enter your password"
+
+#: aplicacion/cuenta/templates/cuentalog.html:55
+msgid "¿No estás registrado"
+msgstr "Not registered yet"
+
+#: aplicacion/cuenta/templates/cuentalog.html:55
+msgid "Regístrate aquí"
+msgstr "Register here"
+
+#: aplicacion/cuenta/templates/registro.html:5
+msgid "Registro"
+msgstr "Registration"
+
+#: aplicacion/cuenta/templates/registro.html:15
+#, fuzzy
+msgid "Registrate"
+msgstr "Register"
+
+#: aplicacion/cuenta/templates/registro.html:31
+msgid "Ingrese su correo electrónico"
+msgstr "Enter your email"
+
+#: aplicacion/cuenta/templates/registro.html:64
+msgid "¿Ya tienes una cuenta"
+msgstr "Already have an account"
+
+#: aplicacion/cuenta/templates/registro.html:64
+msgid "Inicia sesión aquí"
+msgstr "Log in here"
+
+#: aplicacion/inicio/templates/inicio.html:2
+msgid "Pagina inicio"
+msgstr "Home page"
+
+#: aplicacion/inicio/templates/inicio.html:39
+msgid "Anterior"
+msgstr "Previous"
+
+#: aplicacion/inicio/templates/inicio.html:44
+msgid "Siguiente"
+msgstr "Next"
+
+#: aplicacion/inicio/templates/inicio.html:51
+msgid "¡Bienvenido a LlantasExpress"
+msgstr "Welcome to LlantasExpress"
+
+#: aplicacion/inicio/templates/inicio.html:52
+msgid "Descubre las mejores opciones de llantas para tu vehículo."
+msgstr "Discover the best tire options for your vehicle."
+
+#: aplicacion/inicio/templates/inicio.html:54
+#, fuzzy
+msgid ""
+"En nuestro compromiso por brindarte la mejor calidad y servicio, contamos"
+" con un amplio catálogo de\n"
+"                llantas de las marcas más reconocidas."
+msgstr ""
+"In our commitment to provide you with the best quality and service, we "
+"have an extensive catalog of tires from the most recognized brands."
+
+#: aplicacion/inicio/templates/inicio.html:56
+msgid "Explora nuestras ofertas y encuentra la llanta perfecta para tu conducción"
+msgstr "Explore our offers and find the perfect tire for your driving"
+
+#: aplicacion/inicio/templates/inicio.html:57
+msgid "Ver Catálogo"
+msgstr "View Catalog"
+
+#: aplicacion/inicio/templates/inicio.html:66
+msgid "¿Quiénes Somos"
+msgstr "Who We Are"
+
+#: aplicacion/inicio/templates/inicio.html:67
+#, fuzzy
+msgid ""
+"Somos apasionados por los vehículos y la seguridad en\n"
+"                                    la carretera. Nuestra misión es "
+"proporcionar a nuestros clientes las mejores llantas\n"
+"                                    para garantizar un viaje seguro y "
+"cómodo"
+msgstr ""
+"We are passionate about vehicles and safety on the road. Our mission is "
+"to provide our customers with the best tires to ensure a safe and "
+"comfortable journey."
+
+#: aplicacion/inicio/templates/inicio.html:84
+msgid "Nuestros Servicios"
+msgstr "Our Services"
+
+#: aplicacion/inicio/templates/inicio.html:85
+#, fuzzy
+msgid ""
+"Ofrecemos una amplia variedad de llantas para\n"
+"                                    automóviles, camiones y SUVs. Además,"
+" brindamos servicios de instalación y\n"
+"                                    asesoramiento personalizado para "
+"asegurarnos de que elijas la llanta adecuada para\n"
+"                                    tus necesidades"
+msgstr ""
+"We offer a wide variety of tires for cars, trucks, and SUVs. "
+"Additionally, we provide installation services and personalized advice to"
+" ensure you choose the right tire for your needs"
+
+#: aplicacion/inicio/templates/inicio.html:104
+msgid "Nuestros Productos"
+msgstr "Our Products"
+
+#: aplicacion/inicio/templates/inicio.html:108
+msgid "Llanta para pista"
+msgstr "Track tire"
+
+#: aplicacion/inicio/templates/inicio.html:112
+msgid "Llanta todoterreno"
+msgstr "Off-road tire"
+
+#: aplicacion/inicio/templates/inicio.html:116
+#, fuzzy
+msgid "Llanta multiproposito"
+msgstr "Multipurpose tire"
+
+#: aplicacion/templates/base.html:43
+msgid "Idioma"
+msgstr "Language"
+
+#: aplicacion/templates/base.html:47
+msgid "Inglés"
+msgstr "English"
+
+#: aplicacion/templates/base.html:49
+msgid "Español"
+msgstr "Spanish"
+
+#: aplicacion/templates/base.html:59 aplicacion/templates/base.html:159
+msgid "Inicio"
+msgstr "Home"
+
+#: aplicacion/templates/base.html:63 aplicacion/templates/base.html:160
+msgid "Catálogo"
+msgstr "Catalog"
+
+#: aplicacion/templates/base.html:66
+msgid "Productos"
+msgstr "Products"
+
+#: aplicacion/templates/base.html:79
+#, fuzzy
+msgid "Cerrar Sesion"
+msgstr "Logout"
+
+#: aplicacion/templates/base.html:90
+msgid "Mi cuenta"
+msgstr "My account"
+
+#: aplicacion/templates/base.html:131
+msgid "¿Deseas cerrar sesión"
+msgstr "Do you want to log out"
+
+#: aplicacion/templates/base.html:135
+msgid "Cerrar Sesión"
+msgstr "Logout"
+
+#: aplicacion/templates/base.html:151
+msgid "Contacto"
+msgstr "Contact"
+
+#: aplicacion/templates/base.html:152
+msgid "Dirección"
+msgstr "Address"
+
+#: aplicacion/templates/base.html:153
+msgid "Teléfono"
+msgstr "Phone"
+
+#: aplicacion/templates/base.html:157
+msgid "Enlaces Rápidos"
+msgstr "Fast Links"
+
+#: aplicacion/templates/base.html:166
+msgid "Síguenos en Redes Sociales"
+msgstr "Follow us in Social Networks"
+
+#~ msgid "¿Deseas sacar el producto del carrito"
+#~ msgstr "Do you want Remove the product from the cart"
+
+#~ msgid "Ingrese su celular"
+#~ msgstr "Enter your phone number"
+
+#~ msgid "Ingrese su método de pago"
+#~ msgstr "Enter your payment method"
+
