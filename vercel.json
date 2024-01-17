@@ -1,0 +1,16 @@
+{
+    "functions": {
+      "api": {
+        "handler": "run.app",
+        "runtime": "python3.8",
+        "includeFiles": ["run.py", "aplicacion"]
+      }
+    },
+    "builds": [
+      {
+        "src": "run.py",
+        "use": "@vercel/python"
+      }
+    ]
+  }
+  
